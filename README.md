@@ -2,7 +2,7 @@
 
 e.g. of node websocket
 ## Requirements
-* websocket
+* faye-websocket
 
 ## Usage
 ```bash
