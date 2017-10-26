@@ -1,0 +1,27 @@
+{
+  "name": "node-websocket",
+  "version": "0.0.1",
+  "description": "e.g. of node websocket",
+  "main": "websocket.js",
+  "scripts": {
+    "start": "node faye-websocket.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lovesora/node-websocket.git"
+  },
+  "keywords": [
+    "websocket"
+  ],
+  "author": "liuxin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lovesora/node-websocket/issues"
+  },
+  "homepage": "https://github.com/lovesora/node-websocket#readme",
+  "devDependencies": {
+    "express": "^4.16.2",
+    "faye-websocket": "^0.11.1"
+  }
+}

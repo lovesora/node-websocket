@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>websocket</title>
+    <script>
+        function onClickWebsocket() {
+            if ('WebSocket' in window) {
+                console.log('您的浏览器支持 WebSocket!');
+
+                // 打开一个 web socket
+                var ws = new WebSocket('ws://' + location.host);
+                var interval, i = 0;
+                
+                ws.onopen = function () {
+                    interval = setInterval(function () {
+                        console.log('数据发送中: ' + i);
+                        ws.send(i++);
+                    }, 2000);
+                };
+
+                ws.onmessage = function (evt) {
+                    console.log('数据已接收: ' + evt.data);
+                };
+
+                ws.onclose = function () {
+                    clearInterval(interval);
+                    console.log('连接已关闭...');
+                };
+            } else {
+                // 浏览器不支持 WebSocket
+                console.log('您的浏览器不支持 WebSocket!');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button class='button-primary' onclick='onClickWebsocket()'>connect websocket</button>
+</body>
+
+</html>
