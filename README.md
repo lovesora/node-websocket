@@ -1,6 +1,6 @@
-# node-websocket
-e.g. of node websocket[![DUB](https://img.shields.io/dub/l/vibe-d.svg)]() [![Travis](https://img.shields.io/travis/rust-lang/rust.svg)]()
+# node-websocket [![DUB](https://img.shields.io/dub/l/vibe-d.svg)]() [![Travis](https://img.shields.io/travis/rust-lang/rust.svg)]()
 
+e.g. of node websocket
 ## Requirements
 * websocket
 
